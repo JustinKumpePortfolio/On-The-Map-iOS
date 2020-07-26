@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-u" translatesAutoresizingMaskIntoConstraints="NO" id="6ga-yg-NFo">
-                                <rect key="frame" x="87" y="179" width="240" height="128"/>
+                                <rect key="frame" x="87" y="124" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="8Zy-3C-eN6"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="S0h-dy-wrF" userLabel="Stack View Login">
-                                <rect key="frame" x="32" y="339" width="350" height="169"/>
+                                <rect key="frame" x="32" y="284" width="350" height="169"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JCO-nA-gPt">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
@@ -75,7 +75,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6ga-yg-NFo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="Brc-xW-6DD"/>
+                            <constraint firstItem="6ga-yg-NFo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="Brc-xW-6DD"/>
                             <constraint firstItem="6ga-yg-NFo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="ZCT-QY-KCa"/>
                             <constraint firstItem="S0h-dy-wrF" firstAttribute="top" secondItem="6ga-yg-NFo" secondAttribute="bottom" constant="32" id="dua-j2-CVK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S0h-dy-wrF" secondAttribute="trailing" constant="32" id="j5w-26-Yn9"/>
@@ -280,7 +280,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="KIN-Pi-hEs">
-                                <rect key="frame" x="36" y="318.5" width="342" height="227"/>
+                                <rect key="frame" x="36" y="92" width="342" height="227"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_world" translatesAutoresizingMaskIntoConstraints="NO" id="RbB-8q-sdJ">
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="67"/>
@@ -319,7 +319,7 @@
                         <constraints>
                             <constraint firstItem="vx0-r5-dIW" firstAttribute="trailing" secondItem="KIN-Pi-hEs" secondAttribute="trailing" constant="36" id="ZRe-N2-35W"/>
                             <constraint firstItem="KIN-Pi-hEs" firstAttribute="leading" secondItem="vx0-r5-dIW" secondAttribute="leading" constant="36" id="dPY-69-jnH"/>
-                            <constraint firstItem="KIN-Pi-hEs" firstAttribute="centerY" secondItem="vx0-r5-dIW" secondAttribute="centerY" id="jFL-TB-Dht"/>
+                            <constraint firstItem="KIN-Pi-hEs" firstAttribute="top" secondItem="vx0-r5-dIW" secondAttribute="top" constant="36" id="dqH-5J-phy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vx0-r5-dIW"/>
                     </view>
