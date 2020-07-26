@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import UIKit
+
+public func launchURL(_ urlString: String?) -> Void {
+    if let urlString = urlString, let url = URL(string: urlString) {
+        if #available(iOS 10, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+}

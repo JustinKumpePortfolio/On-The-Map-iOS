@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+struct SessionResponse {
+    let account: Account
+    let session: Session
+    
+    
+    struct Account {
+        let registered: Bool
+        let key: String
+    }
+    
+    struct Session {
+        let id: String
+        let expiration: String
+    }
+}

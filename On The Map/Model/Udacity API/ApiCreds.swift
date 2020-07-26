@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+struct ApiCreds {
+    let udacity: Udacity
+    
+    struct Udacity {
+        let username: String
+        let password: String
+        var jsonBody: String {
+            return "{\"udacity\": {\"username\": \"\(username)\", \"password\": \"\(password)\"}}"
+        }
+    }
+    
+    
+}

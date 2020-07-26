@@ -6,4 +6,11 @@
 //  Copyright © 2020 Justin Kumpe. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension Notification.Name{
+    
+//    Data Update notifications for Map and List views
+    static let buildMap = Notification.Name("buildMap")
+    static let buildList = Notification.Name("buildList")
+}
