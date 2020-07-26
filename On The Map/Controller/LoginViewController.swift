@@ -25,13 +25,6 @@ class LoginViewController: UIViewController {
 //    MARK: Reachability
     let reachability = try! Reachability()
 
-//    MARK: ViewDidLoad
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.fieldUsername.text = "jakumpe@kumpes.com"
-        self.fieldPassword.text = "Sa1ntFlor1an2016"
-        //self.pressedLogin(self)
-    }
     
 //    MARK: ViewWillAppear
     override func viewWillAppear(_ animated: Bool) {
