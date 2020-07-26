@@ -26,12 +26,12 @@ class TabBarViewController: UITabBarController {
     }
     
     
-//    MARK: clickedAdd
+//    MARK: Clicked Add
     @IBAction func clickedAdd(){
         performSegue(withIdentifier: "segueAddStudent", sender: self)
     }
     
-//    MARK: clickedRefresh
+//    MARK: Clicked Refresh
     @IBAction func clickedRefresh(){
         getLocations()
     }

@@ -15,19 +15,27 @@ class ApiClient {
     // shared session
     public static var session = URLSession.shared
     
-    
+//    MARK: Task for GET Request
     class func taskForGETRequest(removePadding: Bool = false, url: URL, completionHandler: @escaping (_ result: AnyObject?, _ error: NSError?, _ errorMessage: String) -> Void) -> URLSessionDataTask {
             taskForRequest(httpMethod: "GET", removePadding: removePadding, url: url, jsonBody: "", completionHandler: completionHandler)
     }
     
+//    MARK: Task for POST Request
     class func taskForPOSTRequest(removePadding: Bool = true, url: URL, jsonBody: String, completionHandler: @escaping (_ result: AnyObject?, _ error: NSError?, _ errorMessage: String) -> Void) -> URLSessionDataTask {
             taskForRequest(httpMethod: "POST", removePadding: removePadding, url: url, jsonBody: jsonBody, completionHandler: completionHandler)
     }
     
+//    MARK: Task for DELETE Request
+    class func taskForDELETERequest(removePadding: Bool = true, url: URL, jsonBody: String, completionHandler: @escaping (_ result: AnyObject?, _ error: NSError?, _ errorMessage: String) -> Void) -> URLSessionDataTask {
+            taskForRequest(httpMethod: "DELETE", removePadding: removePadding, url: url, jsonBody: jsonBody, completionHandler: completionHandler)
+    }
+    
+//    MARK: Task for PUT Request
     class func taskForPUTRequest(url: URL, jsonBody: String, completionHandler: @escaping (_ result: AnyObject?, _ error: NSError?, _ errorMessage: String) -> Void) -> URLSessionDataTask {
             taskForRequest(httpMethod: "PUT", removePadding: true, url: url, jsonBody: jsonBody, completionHandler: completionHandler)
     }
     
+//    MARK: Task for _ Request
     class func taskForRequest(httpMethod: String, removePadding: Bool, url: URL, jsonBody: String, completionHandler: @escaping (_ result: AnyObject?, _ error: NSError?, _ errorMessage: String) -> Void) -> URLSessionDataTask {
 //        Build the URL, Configure the request
         let request = NSMutableURLRequest(url: url)

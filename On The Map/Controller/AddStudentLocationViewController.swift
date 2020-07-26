@@ -26,13 +26,13 @@ class AddStudentLocationViewController: UIViewController, MKMapViewDelegate{
 //    MARK: Custom Activity Indicator
     let indicatorActivity = Spinner(frame: CGRect(x: 0, y: 0, width: 100, height: 100), image: UIImage(named: "loading")!)
     
-//    MARK: viewDidLoad
+//    MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         viewMap.delegate = self
     }
     
-//    MARK: viewWillAppear
+//    MARK: ViewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         dropPin()

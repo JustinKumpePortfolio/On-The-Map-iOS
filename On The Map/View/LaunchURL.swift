@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// MARK: Launch URL
 public func launchURL(_ urlString: String?) -> Void {
     if let urlString = urlString, let url = URL(string: urlString) {
         if #available(iOS 10, *) {

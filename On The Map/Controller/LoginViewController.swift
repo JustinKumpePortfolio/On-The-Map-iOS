@@ -36,7 +36,9 @@ class LoginViewController: UIViewController {
 //    MARK: ViewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        AuthUser.logout()
+        ApiClient.logout(){ (success,error) in
+            
+        }
         
 //        Start Notifications for Network Reachability Changes
         DispatchQueue.global(qos: .background).async {
@@ -54,7 +56,7 @@ class LoginViewController: UIViewController {
     }
     
     
-//    MARK: enableUI
+//    MARK: Enable UI
 //    We are also going to start/stop activity indicator in this func
     func enableUI(_ enable: Bool){
         RotateImage.rotate(!enable, imageLogo, hideWhenStopped: false)
@@ -64,7 +66,7 @@ class LoginViewController: UIViewController {
         buttonSignup.isEnabled = enable
     }
     
-    
+//    MARK: Pressed Login
     @IBAction func pressedLogin(_ sender: Any){
 //        Disable UI to indicate activity
         enableUI(false)
@@ -79,6 +81,8 @@ class LoginViewController: UIViewController {
             
     }
     
+//    MARK: Login Response
+//    Handles user login response
     func loginResponse(success: Bool, error: String){
         if success{
             // Login success
@@ -89,6 +93,7 @@ class LoginViewController: UIViewController {
         enableUI(true)
     }
     
+//    MARK: Pressed Signup
     @IBAction func pressedSignup(){
         launchURL(Constants.UdacityUrls.signup)
     }

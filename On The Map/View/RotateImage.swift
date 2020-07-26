@@ -11,6 +11,7 @@
 import Foundation
 import UIKit
 
+
 class RotateImage {
     
     static var activeView: UIView = UIView()

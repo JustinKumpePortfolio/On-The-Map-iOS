@@ -93,7 +93,7 @@ class FindStudentLocationViewController: UIViewController {
         fieldUrl.becomeFirstResponder()
     }
     
-//    MARK: enableUI
+//    MARK: Enable UI
     func enableUI(_ enable: Bool){
         fieldLocation.isEnabled = enable
         fieldUrl.isEnabled = enable
