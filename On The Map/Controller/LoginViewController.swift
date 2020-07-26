@@ -91,6 +91,11 @@ class LoginViewController: UIViewController {
         launchURL(Constants.UdacityUrls.signup)
     }
     
+    @IBAction func actionEmail(_ sender: Any) {
+        fieldPassword.becomeFirstResponder()
+    }
+    
+    
     
 //    MARK: Reachability Changed
 //    Handles network connection issues
@@ -110,6 +115,12 @@ class LoginViewController: UIViewController {
         print("Error")
         }
     }
+    
+    //    MARK: Hide Keyboard
+    //    Hides Keyboard when user touches outside of text field
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
 
 }
 
