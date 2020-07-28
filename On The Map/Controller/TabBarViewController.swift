@@ -21,6 +21,7 @@ class TabBarViewController: UITabBarController {
 
 //    MARK: ViewWillAppear
     override func viewWillAppear(_ animated: Bool) {
+			super.viewWillAppear(animated)
         enableUi(true)
         getLocations()
     }
