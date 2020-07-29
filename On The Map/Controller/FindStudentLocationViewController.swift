@@ -74,12 +74,12 @@ class FindStudentLocationViewController: UIViewController {
 //    MARK: Prepare for Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueAddLocation" {
-            let vc = segue.destination as! AddStudentLocationViewController
+            let viewController = segue.destination as! AddStudentLocationViewController
 
-            vc.stringLocation = fieldLocation.text
-            vc.stringUrl = fieldUrl.text
-            vc.latitude = latitude
-            vc.longitude = longitude
+            viewController.stringLocation = fieldLocation.text
+            viewController.stringUrl = fieldUrl.text
+            viewController.latitude = latitude
+            viewController.longitude = longitude
         }
     }
     
