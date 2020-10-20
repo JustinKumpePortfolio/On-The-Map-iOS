@@ -12,7 +12,7 @@ import Foundation
 import UIKit
 
 
-class RotateImage {
+public class RotateImage {
     
     static var activeView: UIView = UIView()
 
@@ -51,9 +51,9 @@ class RotateImage {
 public class Spinner: UIView {
     
 
-  let imageView = UIImageView()
+    public let imageView = UIImageView()
 
-    init(frame: CGRect, image: UIImage) {
+    public init(frame: CGRect, image: UIImage) {
         super.init(frame: frame)
 
         imageView.frame = bounds
@@ -67,17 +67,17 @@ public class Spinner: UIView {
         fatalError()
     }
 
-    func startAnimating() {
+    public func startAnimating() {
         isHidden = false
         rotateImage()
     }
 
-    func stopAnimating() {
+    public func stopAnimating() {
         isHidden = true
         removeRotationImage()
     }
 
-    private func rotateImage() {
+    public func rotateImage() {
         let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotation.toValue = NSNumber(value: Double.pi * 2)
         rotation.duration = 1
@@ -86,19 +86,19 @@ public class Spinner: UIView {
         self.imageView.layer.add(rotation, forKey: "rotationAnimation")
     }
 
-    private func removeRotationImage() {
+    public func removeRotationImage() {
          self.imageView.layer.removeAnimation(forKey: "rotationAnimation")
     }
 }
 
-enum RoundType {
+public enum RoundType {
     case top
     case none
     case bottom
     case both
 }
 
-extension UIView {
+public extension UIView {
 
     func round(with type: RoundType, radius: CGFloat = 10.0) {
         var corners: UIRectCorner
